@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <script src="./movies.js"></script>
+    <title>IMDB - Películas</title>
+</head>
+
+<body class="bg-dark text-light"  onload="loadData()">
+    <main>
+        <header>
+            <div class="bg-dark p-3">
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="./professional.html">Profesionales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="Películas" href="#">Películas</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div class="container">
+            <div class="movie-data col-6">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="title" aria-describedby="Título" placeholder="Título">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="releaseYear" aria-describedby="Año de lanzamiento" placeholder="Año de lanzamiento">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="genre" aria-describedby="Género" placeholder="Género">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="language" aria-describedby="Idioma"
+                        placeholder="Idioma">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="plataform" aria-describedby="Plataforma"
+                        placeholder="Plataforma">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="mainCharacterName" aria-describedby="Personaje principal"
+                        placeholder="Personaje principal">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="image" placeholder="Cartel">
+                </div>
+                <button type="reset" class="btn btn-primary" onclick="addMovie()">Añadir</button>
+            </div>
+            <div>&nbsp;</div>
+            <div class="page-content bg-dark" id="movie-show">
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
